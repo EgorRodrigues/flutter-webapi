@@ -7,6 +7,7 @@ class TransactionsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // transactions.add(Transaction(100.0, Contact(0, 'Egor', 12345)));
     return Scaffold(
       appBar: AppBar(
         title: Text('Transactions'),
