@@ -29,7 +29,7 @@ final Client client = HttpClientWithInterceptor.build(
   interceptors: [LoggingInterceptor()],
 );
 
-const String baseUrl = 'http://192.168.20.249:8080/transactions';
+const String baseUrl = 'http://192.168.100.171:8080/transactions';
 
 Future<List<Transaction>> findAll() async {
   final Response response =

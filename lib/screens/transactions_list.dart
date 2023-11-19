@@ -7,12 +7,13 @@ import 'package:flutter/material.dart';
 class TransactionsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // transactions.add(Transaction(100.0, Contact(0, 'Egor', 12345)));
     return Scaffold(
       appBar: AppBar(
         title: Text('Transactions'),
       ),
       body: FutureBuilder<List<Transaction>>(
-        future: findAll(),
+        future: findAll(), //Future.delayed(Duration(seconds: 1)).then((value) => findAll()),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
             case ConnectionState.none:
