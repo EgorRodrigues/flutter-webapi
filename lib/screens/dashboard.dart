@@ -10,33 +10,41 @@ class Dashboard extends StatelessWidget {
       appBar: AppBar(
         title: Text('Dashboard'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset('images/bytebank_logo.png'),
-          ),
-          Container(
-            height: 120,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                _FeatureItem(
-                  'Transfer',
-                  Icons.monetization_on,
-                  onClick: () => _showContactsList(context),
-                ),
-                _FeatureItem(
-                  'Transaction Feed',
-                  Icons.description,
-                  onClick: () => _showTransactionsList(context),
-                ),
-              ],
+      body: Padding(
+        padding: const EdgeInsets.only(
+          left: 0.0,
+          top: 0.0,
+          right: 0.0,
+          bottom: 30.0,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('images/bytebank_logo.png'),
             ),
-          ),
-        ],
+            Container(
+              height: 120,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  _FeatureItem(
+                    'Transfer',
+                    Icons.monetization_on,
+                    onClick: () => _showContactsList(context),
+                  ),
+                  _FeatureItem(
+                    'Transaction Feed',
+                    Icons.description,
+                    onClick: () => _showTransactionsList(context),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
