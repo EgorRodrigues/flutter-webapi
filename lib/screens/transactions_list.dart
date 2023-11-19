@@ -5,7 +5,6 @@ import 'package:bytebank/models/transaction.dart';
 import 'package:flutter/material.dart';
 
 class TransactionsList extends StatelessWidget {
-
   final TransactionWebClient _webClient = TransactionWebClient();
 
   @override
@@ -26,7 +25,7 @@ class TransactionsList extends StatelessWidget {
             case ConnectionState.active:
               break;
             case ConnectionState.done:
-              if(snapshot.hasData){
+              if (snapshot.hasData) {
                 final List<Transaction> transactions = snapshot.data;
                 if (transactions.isNotEmpty) {
                   return ListView.builder(

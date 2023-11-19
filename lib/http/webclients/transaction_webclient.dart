@@ -26,5 +26,4 @@ class TransactionWebClient {
 
     return Transaction.fromJson(jsonDecode(response.body));
   }
-
 }

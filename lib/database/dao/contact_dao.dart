@@ -3,7 +3,6 @@ import 'package:sqflite/sqflite.dart';
 import 'package:bytebank/database/app_database.dart';
 
 class ContactDao {
-
   static const String tableSql = 'CREATE TABLE $_tableName('
       '$_id INTEGER PRIMARY KEY, '
       '$_name TEXT, '
